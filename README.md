@@ -1,4 +1,4 @@
-# InternationalMealCompany
+# International Meal Company
 ***International Meal Company*** requiere un sistema para la gestión de sus empleados en el cual se pueda visualizar los datos de los mismos.
 
 - Los datos que se tienen de los empleados además de sus datos personales son, fecha de ingreso, tipo de contrato, fecha de término de contrato, cargo, dependencia en la que labora y salario devengado.
