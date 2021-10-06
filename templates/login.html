@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <form class="form-signin text-center shadow-lg p-3 mb-5 bg-white rounded" action="" method="post">
+    <img class="mb-4" src="../static/images/Logo.PNG" alt="" width="82" height="82">
+    <h1 class="h3 mb-3 font-weight-normal">Por favor ingrese su información</h1>
+    <input type="text" name="username" class="form-control" placeholder="Username" value="{{
+    request.form.username }}" required autofocus>
+    <input type="password" name="password" class="form-control" placeholder="Password" value="{{
+    request.form.password }}" required>
+    <div class="checkbox mb-3">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Ingresar</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+  </form>
+</div>
+
+{% endblock %}
