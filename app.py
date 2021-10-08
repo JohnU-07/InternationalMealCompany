@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for, session, flash
 from functools import wraps
+from forms import FormIndex
 import os
 
 
@@ -34,8 +35,9 @@ def login_required(f):
 @app.route('/')
 @login_required
 def home():
+    form = FormIndex()
     # return "Hello, World!"  # return a string
-    return render_template('index.html')  # render a template
+    return render_template('index.html', form=form)  # render a template
 
 @app.route('/welcome')
 def welcome():

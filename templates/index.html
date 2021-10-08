@@ -8,37 +8,37 @@
   <h2>Hola, Usuario</h2>
   <img src="/static/images/logo.png" alt="">
   <ul>
-      <li><a href="#infoper">Ver/Modificar Informacion personal</a></li>
-      <li><a href="#retroal">Visualizar puntaje/retroalimentacion</a></li>
-      <li><a href="cambiapass">Cambiar contraseña</a></li>
-      <li><a href="/logout">Cerrar sesion</a></li>
+    <li><a href="#infoper">Ver/Modificar Informacion personal</a></li>
+    <li><a href="#retroal">Visualizar puntaje/retroalimentacion</a></li>
+    <li><a href="cambiapass">Cambiar contraseña</a></li>
+    <li><a href="/logout">Cerrar sesion</a></li>
   </ul>
 </nav>
 
 <div class="content">
-    <form action="" method="post">
-      {{ form.pnombre.label }}
-      {{ form.pnombre}}
-      {{ form.snombre.label }}
-      {{ form.snombre}}
-      {{ form.papellido.label }}
-      {{ form.papellido}}
-      {{ form.sapellido.label }}
-      {{ form.sapellido }}
-      {{ form.tipoid.label }}
-      {{ form.tipoid }}
-      {{ form.registrar }}
-      {{ form.id.label }}
-      {{ form.id }}
-      {{ form.fnacimiento.label }}
-      {{ form.fnacimiento }}
-      {{ form.email.label }}
-      {{ form.email }}
-      {{ form.direccion.label }}
-      {{ form.direccion }}
-      {{ form.telefono.label }}
-      {{ form.telefono }}
-    </form>
+  <form action="" method="post">
+    {{ form.pnombre.label }}
+    {{ form.pnombre}}
+    {{ form.snombre.label }}
+    {{ form.snombre}}
+    {{ form.papellido.label }}
+    {{ form.papellido}}
+    {{ form.sapellido.label }}
+    {{ form.sapellido }}
+    {{ form.tipoid.label }}
+    {{ form.tipoid }}
+    {{ form.idNum.label }}
+    {{ form.idNum }}
+    {{ form.fnacimiento.label }}
+    {{ form.fnacimiento }}
+    {{ form.email.label }}
+    {{ form.email }}
+    {{ form.direccion.label }}
+    {{ form.direccion }}
+    {{ form.telefono.label }}
+    {{ form.telefono }}
+    {{ form.enviar }}
+  </form>
 </div>
 
-  {% endblock %}
+{% endblock %}
