@@ -1,9 +1,44 @@
+<link rel="stylesheet" href="../static/css/menu.css">
+
 {% extends "base.html" %}
 {% block content %}
 
 
-<h1>Bienvenido a IMC!</h2>
-  <br>
-  <p>Click <a href="/logout">aquí</a> para cerrar sesión.</p>
+<nav>
+  <h2>Hola, Usuario</h2>
+  <img src="/static/images/logo.png" alt="">
+  <ul>
+      <li><a href="#infoper">Ver/Modificar Informacion personal</a></li>
+      <li><a href="#retroal">Visualizar puntaje/retroalimentacion</a></li>
+      <li><a href="cambiapass">Cambiar contraseña</a></li>
+      <li><a href="/logout">Cerrar sesion</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+    <form action="" method="post">
+      {{ form.pnombre.label }}
+      {{ form.pnombre}}
+      {{ form.snombre.label }}
+      {{ form.snombre}}
+      {{ form.papellido.label }}
+      {{ form.papellido}}
+      {{ form.sapellido.label }}
+      {{ form.sapellido }}
+      {{ form.tipoid.label }}
+      {{ form.tipoid }}
+      {{ form.registrar }}
+      {{ form.id.label }}
+      {{ form.id }}
+      {{ form.fnacimiento.label }}
+      {{ form.fnacimiento }}
+      {{ form.email.label }}
+      {{ form.email }}
+      {{ form.direccion.label }}
+      {{ form.direccion }}
+      {{ form.telefono.label }}
+      {{ form.telefono }}
+    </form>
+</div>
 
   {% endblock %}
