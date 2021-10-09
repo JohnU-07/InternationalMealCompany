@@ -16,28 +16,93 @@
 </nav>
 
 <div class="content">
-  <form action="" method="post">
-    {{ form.pnombre.label }}
-    {{ form.pnombre}}
-    {{ form.snombre.label }}
-    {{ form.snombre}}
-    {{ form.papellido.label }}
-    {{ form.papellido}}
-    {{ form.sapellido.label }}
-    {{ form.sapellido }}
-    {{ form.tipoid.label }}
-    {{ form.tipoid }}
-    {{ form.idNum.label }}
-    {{ form.idNum }}
-    {{ form.fnacimiento.label }}
-    {{ form.fnacimiento }}
-    {{ form.email.label }}
-    {{ form.email }}
-    {{ form.direccion.label }}
-    {{ form.direccion }}
-    {{ form.telefono.label }}
-    {{ form.telefono }}
-    {{ form.enviar }}
+  <form action="" method="post" class="row m-5 g-3 needs-validation" novalidate>
+    <div class="col-md-3">
+      {{ form.pnombre.label(class="form-label") }}
+      {{ form.pnombre(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      {{ form.snombre.label(class="form-label") }}
+      {{ form.snombre(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      {{ form.papellido.label(class="form-label") }}
+      {{ form.papellido(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      {{ form.sapellido.label(class="form-label") }}
+      {{ form.sapellido(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.tipoid.label(class="form-label") }}
+      {{ form.tipoid(class="form-select")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.idNum.label(class="form-label") }}
+      {{ form.idNum(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.fnacimiento.label(class="form-label") }}
+      {{ form.fnacimiento(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.email.label(class="form-label") }}
+      {{ form.email(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.direccion.label(class="form-label") }}
+      {{ form.direccion(class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      {{ form.telefono.label(class="form-label") }}
+      {{ form.telefono (class="form-control")}}
+      <div class="valid-feedback">
+        Está bien!
+      </div>
+    </div>
+
+
+    <div class="col-12">
+      {{ form.enviar(class="btn btn-warning") }}
+    </div>
+
+
   </form>
 </div>
 
