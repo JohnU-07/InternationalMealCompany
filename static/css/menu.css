@@ -3,35 +3,37 @@
 body{
     background-color: #f5f5f5;
     grid-template-columns: 30% 70%;
+
+
 }
 
 nav h2{
     float:left;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 20px;
     
 }
 
-nav img{
+.imguno{
     float:right;
-    height: 70px;
+    width: 120px;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 20px;  
+}
 
-    
+input{
+    padding: 10px;
+    margin: 25px;
+    color: black;
 }
 
 nav{
     
     display: table-cell;    
-    background-color: #dddddd;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 350px;
+    background: linear-gradient(20deg, grey, white, grey);
     height: 900px;
-    border-radius: 5px;
+    border-radius: 1rem;
     text-align: left;
-    
 }
 
 ul{
@@ -53,11 +55,21 @@ header h2{
 
 .content{
     position: relative;
+    background: url(../images/logo2.png);
+    background-size: 100% 100%;
+    opacity: 0.5;
     display: table-cell;
     margin-left: 500px;
     border: 1px solid black;
     border-radius: 1rem;
-    
-   
-    
 }
+
+div.form-names{
+    text-align: center;
+    color: black;
+  
+    margin: 50px; 
+} 
+
+
+
