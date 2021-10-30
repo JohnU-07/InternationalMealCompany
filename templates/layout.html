@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../static/images/logo.png">
+    <title>International Meal Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <link href="../static/css/sidebars.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand d-flex flex-column align-item-start" id="sidebar">
+
+        <a class="navbar-brand"><img src="../static/images/logo2.png" width="200" height="200"
+                alt="International Meal Company"></a>
+        <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+            <li class="nav-item dropdown w-100">
+                <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-expanded="false">Mi Información</a>
+                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <li><a href="/show" class="dropdown-item text-light pl-4 p-2">Ver</a>
+                    </li>
+                    <li><a href="/edit/{{session['id']}}" class="dropdown-item text-light pl-4 p-2">Modificar</a></li>
+                </ul>
+            </li>
+            <li class="nav-item w-100">
+                <a href="/register" class="nav-link text-light pl-4">Registrar Usuario</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4">Retroalimentación</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="#" class="nav-link text-light pl-4">Cambiar Contraseña</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="/" class="nav-link text-light pl-4">Inicio</a>
+            </li>
+            <li class="nav-item w-100">
+                <a href="/logout" class="nav-link text-light pl-4">Cerrar sesión</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="p-4 my-container">
+        <button class="btn my-4" id="menu-btn">Menú</button>
+        <div class="container pt-4">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </section>
+    <script>
+        const btnDelete = document.querySelectorAll('.btn-delete');
+        if (btnDelete) {
+            const btnArray = Array.from(btnDelete);
+            btnArray.forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    if (!confirm('¿Esta seguro que desea eliminar este usuario?')) {
+                        e.preventDefault();
+                    }
+                });
+            })
+        }
+
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+                "iDisplayLength": 3,
+                "language": {
+                    search: "Buscar Empleado:",
+                    lengthMenu: 'Mostar <select>' +
+                        '<option value="3">3</option>' +
+                        '<option value="5">5</option>' +
+                        '<option value="10">10</option>' +
+                        '<option value="25">25</option>' +
+                        '<option value="-1">Todos los</option>' +
+                        '</select> registros',
+                    info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                    infoEmpty: "No existen registros",
+                    paginate: {
+                        first: "Primero",
+                        previous: "Previo",
+                        next: "Siguiente",
+                        last: "Ultimo"
+                    },
+                }
+            }
+            );
+        });
+
+    </script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"
+        integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script>
+        var menu_btn = document.querySelector("#menu-btn")
+        var sidebar = document.querySelector("#sidebar")
+        var container = document.querySelector(".my-container")
+        menu_btn.addEventListener("click", () => {
+            sidebar.classList.toggle("active-nav")
+            container.classList.toggle("active-cont")
+        })
+    </script>
+</body>
+
+</html>

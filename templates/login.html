@@ -40,11 +40,24 @@
 
     <!-- errors -->
     {% if error %}
-    <p class="error"><strong>Error:</strong> {{ error }}</p>
+    <div class="col-md-3">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error: </strong>{{ error }}
+      </div>
+    </div>
     {% endif %}
 
+
+
     <!-- messages -->
-    {% for message in get_flashed_messages() %}
-    {{ message }}
-    {% endfor %}
+    <div class="col-md-3">
+      {% for message in get_flashed_messages() %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+
+
+
   </div>

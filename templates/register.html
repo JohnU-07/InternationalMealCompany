@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-body">
+
+            <form action="/add_contact" method="POST" class="row g-3 needs-validation">
+
+                <div class="form-group col-md-3">
+                    <label for="pNombre" class="form-label">Primer Nombre</label>
+                    <input type="text" id="pNombre" name="pNombre" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="sNombre" class="form-label">Segundo Nombre</label>
+                    <input type="text" id="sNombre" name="sNombre" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="pApellido" class="form-label">Primer Apellido</label>
+                    <input type="text" id="pApellido" name="pApellido" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="sApellido" class="form-label">Segundo Apellido</label>
+                    <input type="text" id="sApellido" name="sApellido" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="fechaIngreso" class="form-label">Fecha Ingreso</label>
+                    <input type="date" id="fechaIngreso" name="fechaIngreso" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="tipoContrato" class="form-label">Tipo Contrato</label>
+                    <input type="text" id="tipoContrato" name="tipoContrato" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="fechaTerminoContrato" class="form-label">Fecha Termino Contrato</label>
+                    <input type="date" id="fechaTerminoContrato" name="fechaTerminoContrato" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="idDependencia" class="form-label">Dependencia</label>
+                    <input type="text" id="idDependencia" name="idDependencia" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="salario" class="form-label">Salario</label>
+                    <input type="text" id="salario" name="salario" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="idCargo" class="form-label">Cargo</label>
+                    <input type="text" id="idCargo" name="idCargo" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="idTipoUsuario" class="form-label">Tipo de Usuario</label>
+                    <input type="text" id="idTipoUsuario" name="idTipoUsuario" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="idTipoIdentificacion" class="form-label">Tipo de Identificación</label>
+                    <input type="text" id="idTipoIdentificacion" name="idTipoIdentificacion" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="numeroIdentificacion" class="form-label">Número de Identificación</label>
+                    <input type="text" id="numeroIdentificacion" name="numeroIdentificacion" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" class="form-control">
+                </div>
+                <div class="form-group col-md-2 offset-md-5">
+                    <button class="btn btn-warning btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
